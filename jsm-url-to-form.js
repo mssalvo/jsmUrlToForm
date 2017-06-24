@@ -50,9 +50,9 @@ var jsmUrlToForm = jsmUrlToForm || false;
                         .putObj("<input>", {type: "submit", value: "go!", style: "display:none"})
 
             }
-            this.scaner();
+            this.scanner();
         },
-        scaner: function () {
+        scanner: function () {
             Array.prototype.slice.call(d.querySelectorAll("a")).forEach(function (el, i) {
                 if (!jsmUrlToForm.settyng.escludeDef.test(el.getAttribute("href")) && !new RegExp("(\\b"+jsmUrlToForm.settyng.escludeExt.join("\\b|\\b")+"\\b)","i").test(el.getAttribute("href")) && !new RegExp("(\\b"+jsmUrlToForm.settyng.esclude.join("\\b|\\b")+"\\b)","i").test(el.getAttribute("href")))
                     el.setAttribute("href", "javascript:{jsmUrlToForm.attachForm('" + el.getAttribute("href") + "')}");
