@@ -5,7 +5,7 @@ Converts links to get and post forms
 __Example__
 
 ```
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="jsm-url-to-form.js"></script>
 
       <script>
       window.onload=function(){
@@ -17,7 +17,7 @@ __Example__
 __Custom__
 
 ```
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="jsm-url-to-form.js"></script>
 
       <script>
       window.onload=function(){
