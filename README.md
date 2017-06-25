@@ -63,25 +63,29 @@ Then we can either manually or automatically place the form on the token paramet
                 }
       }
       </script>
+```
+* __jsmUrlToForm.attachForm('url')__
+* __jsmUrlToForm.attachForm('url',<post - get>)__
 
-jsmUrlToForm.attachForm('url')
-jsmUrlToForm.attachForm('url',<post - get>)
+```
 <Sends the call as form request both get and post>
+```
+* __jsmUrlToForm.getToken()__
 
-jsmUrlToForm.getToken() 
+```
 <Return token>
-
-jsmUrlToForm.setToken('token')  
+```
+* __jsmUrlToForm.setToken('token')__
+```
 <Set the javascript side token
 For javascript operations>
-
-
-jsmUrlToForm.verifyToken('url') 
+```
+* __jsmUrlToForm.verifyToken('url')__ 
+```
 <Verifies whether the token parameter exists in the string if it does not exist inserts it
 Returns the string with the token parameter>
-
-
-jsmUrlToForm.get() 
-<context form>
-
+```
+* __jsmUrlToForm.get()__
+```
+<Returns context form>
 ```
