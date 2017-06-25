@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html >
-	<head>
-		<title>jsm-url-to-form</title>
-                  <script type="text/javascript" src="jsm-url-to-form.js"></script>    
-	</head>
-	<body>
-		 
-                        <p style="padding: 15px"> 
-                        <a href="./index.html"> Auto Converte Link </a>
-                        </p>
-                         <p style="padding: 15px"> 
-                        <a href="http://localhost:8383/Moduli/js/index.html"> Auto Converte Link  </a>
-                         <p style="padding: 15px"> 
-                        <a href="javascript:{jsmUrlToForm.attachForm('./index.html','post')}"> Custom Converte Link in POST  </a>
-                         <p style="padding: 15px"> 
-                        <a href="javascript:{jsmUrlToForm.attachForm('./index.html','get')}"> Custom Converte Link in GET  </a>
-                           <p style="padding: 15px"> 
-                        <a href="javascript:{jsmUrlToForm.attachForm('./index.html')}"> Custom Converte Link in mode Default settyng[get-post]  </a>
-                         <p style="padding: 15px"> 
-                        <a href="./"> Converte Link  </a>
-                         <p style="padding: 15px"> 
-                        <a href="#"> Excludes Conversion </a>
-                         <p style="padding: 15px"> 
-                        <a href="#"> Excludes Conversion </a>
-                         <p style="padding: 15px"> 
-                         <a href="http://localhost:8383/product/update/index.html"> Excludes Conversion  </a>
-                          <p style="padding: 15px"> 
-                         <a href="http://localhost:8383/contact/index.html"> Excludes Conversion  </a>
-                        <p style="padding: 15px"> 
-                         <a href="http://localhost:8383/Moduli/js/myimage.jpg"> Excludes Conversion  </a> 
-                        <p style="padding: 15px"> 
-                         <a href="http://localhost:8383/Moduli/js/myimage.png"> Excludes Conversion  </a> 
-                          
-		</p>
-		 
-             
-            
-            <script>
-                window.onload=function(){
-                    jsmUrlToForm.init({
-                        formName: 'jsmToForm', //name form <optional> 
-                        formMethod: 'get', //method form default <optional> 
-                        tokenName: 'token', //Input field containing the token  <optional> 
-                        tokenVal:'default', //token value <optional> 
-                        exclude:['product/update','/contact','etc/etc'], //excludes links that contain the corresponding statement <optional> 
-                        excludeExt:['.jpg','.png','.gif'] //excludes links that contain the corresponding statement <optional> 
-                    });
-                }
-            </script>
-	</body>
+    <head>
+        <title>jsm-url-to-form</title>
+        <script type="text/javascript" src="jsm-url-to-form.js"></script>    
+    </head>
+    <body>
+
+        <p style="padding: 15px"> 
+            <a href="./index.html"> Auto Converte Link </a>
+        </p>
+        <p style="padding: 15px"> 
+            <a href="http://localhost:8383/Moduli/js/index.html"> Auto Converte Link  </a>
+        <p style="padding: 15px"> 
+            <a href="javascript:{jsmUrlToForm.attachForm('./index.html','post')}"> Custom Converte Link in POST  </a>
+        <p style="padding: 15px"> 
+            <a href="javascript:{jsmUrlToForm.attachForm('./index.html','get')}"> Custom Converte Link in GET  </a>
+        <p style="padding: 15px"> 
+            <a href="javascript:{jsmUrlToForm.attachForm('./index.html')}"> Custom Converte Link in mode Default settyng[get-post]  </a>
+        <p style="padding: 15px"> 
+            <a href="./"> Converte Link  </a>
+        <p style="padding: 15px"> 
+            <a href="#"> Excludes Conversion </a>
+        <p style="padding: 15px"> 
+            <a href="#"> Excludes Conversion </a>
+        <p style="padding: 15px"> 
+            <a href="http://localhost:8383/product/update/index.html"> Excludes Conversion  </a>
+        <p style="padding: 15px"> 
+            <a href="http://localhost:8383/contact/index.html"> Excludes Conversion  </a>
+        <p style="padding: 15px"> 
+            <a href="http://localhost:8383/Moduli/js/myimage.jpg"> Excludes Conversion  </a> 
+        <p style="padding: 15px"> 
+            <a href="http://localhost:8383/Moduli/js/myimage.png"> Excludes Conversion  </a> 
+
+        </p>
+
+
+
+        <script>
+            window.onload = function () {
+                jsmUrlToForm.init({
+                    formName: 'jsmToForm', //name form <optional> 
+                    formMethod: 'get', //method form default <optional> 
+                    tokenName: 'token', //Input field containing the token  <optional> 
+                    tokenVal: 'default', //token value <optional> 
+                    exclude: ['product/update', '/contact', 'etc/etc'], //excludes links that contain the corresponding statement <optional> 
+                    excludeExt: ['.jpg', '.png', '.gif'] //excludes links that contain the corresponding statement <optional> 
+                });
+            }
+        </script>
+    </body>
 </html>
