@@ -26,8 +26,8 @@ __Custom__
                         formMethod: 'get', //method form default <optional> 
                         tokenName: 'token', //Input field containing the token  <optional> 
                         tokenVal:'default', //token value <optional> 
-                        esclude:['product/update','/contact','etc/etc'], //excludes links that contain the corresponding statement <optional> 
-                        escludeExt:['.jpg','.png','.gif'] //excludes links that contain the corresponding statement <optional> 
+                        exclude:['product/update','/contact','etc/etc'], //excludes links that contain the corresponding statement <optional> 
+                        excludeExt:['.jpg','.png','.gif'] //excludes links that contain the corresponding statement <optional> 
                     });
                 }
       }
