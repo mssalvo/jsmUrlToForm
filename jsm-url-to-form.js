@@ -14,9 +14,9 @@ var jsmUrlToForm = jsmUrlToForm || false;
             formMethod: 'get',
             tokenName: 'token',
             tokenVal:'default',
-            esclude:['###'],
-            escludeDef:/(javascript:|^#|document?\.|void?\()/i,
-            escludeExt:['.jpg','.jpeg','.png','.gif','.bmp','.svg','.pict','.webp','.tiff','.pcx','.pds','.cdp','.jpd','.rar','.zip','.7z','.iso','.mdf','.jar','.toast','.sitx','.zim','.csv','.doc','.docx','.odt','.ods','.odg','.odp','.pdf','.pps','.txt','.tex','.ltx','.rtf','.xls','.xlsx','.css','.json']}, 
+            exclude:['###'],
+            excludeDef:/(javascript:|^#|document?\.|void?\()/i,
+            excludeExt:['.jpg','.jpeg','.png','.gif','.bmp','.svg','.pict','.webp','.tiff','.pcx','.pds','.cdp','.jpd','.rar','.zip','.7z','.iso','.mdf','.jar','.toast','.sitx','.zim','.csv','.doc','.docx','.odt','.ods','.odg','.odp','.pdf','.pps','.txt','.tex','.ltx','.rtf','.xls','.xlsx','.css','.json']}, 
         toFormGet: function () {
             return {form: d.forms[jsmUrlToForm.settyng.formName], token: d.forms[jsmUrlToForm.settyng.formName].elements[jsmUrlToForm.settyng.tokenName] != undefined ? d.forms[jsmUrlToForm.settyng.formName].elements[jsmUrlToForm.settyng.tokenName].value : '', clear: function () {
                     var el = d.forms[jsmUrlToForm.settyng.formName].elements;
@@ -54,7 +54,7 @@ var jsmUrlToForm = jsmUrlToForm || false;
         },
         scanner: function () {
             Array.prototype.slice.call(d.querySelectorAll("a")).forEach(function (el, i) {
-                if (!jsmUrlToForm.settyng.escludeDef.test(el.getAttribute("href")) && !new RegExp("(\\b"+jsmUrlToForm.settyng.escludeExt.join("\\b|\\b")+"\\b)","i").test(el.getAttribute("href")) && !new RegExp("(\\b"+jsmUrlToForm.settyng.esclude.join("\\b|\\b")+"\\b)","i").test(el.getAttribute("href")))
+                if (!jsmUrlToForm.settyng.excludeDef.test(el.getAttribute("href")) && !new RegExp("(\\b"+jsmUrlToForm.settyng.excludeExt.join("\\b|\\b")+"\\b)","i").test(el.getAttribute("href")) && !new RegExp("(\\b"+jsmUrlToForm.settyng.exclude.join("\\b|\\b")+"\\b)","i").test(el.getAttribute("href")))
                     el.setAttribute("href", "javascript:{jsmUrlToForm.attachForm('" + el.getAttribute("href") + "')}");
             })
         },
@@ -117,13 +117,13 @@ var jsmUrlToForm = jsmUrlToForm || false;
 
             return this;
         },
-        attachForm: function (url, type) {
-            var typeUpper = type || this.settyng.formMethod;
+        attachForm: function (url, type__) {
+            var typeUpper = type__ || this.settyng.formMethod;
             typeUpper = typeUpper.toUpperCase();
 
             this.toFormGet().form.action = url.split("?")[0];
             switch (typeUpper) {
-                case"GET":
+                case "GET":
                     this.toFormGet().form.method = "get";
                     break;
                 case "POST":
